@@ -25,7 +25,7 @@ if (edad > 18 && edad <60)
     }else{
         alert("Debe ingresar sus datos correctamente para ingresar al sitio")
     }
-    satisfiesgit
+
 
 let datosUser = `Hola ${nombreUsuario} ${apellidoUsuario}, según mis cálculos tenes ${edad} años`
  
