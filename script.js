@@ -1,11 +1,3 @@
-const anio = 2023
-let nombreUsuario = prompt ("Decime tu nombre")
-let apellidoUsuario = prompt ("Decime tu apellido")
-let anioDeNacimiento = parseInt (prompt("Decime tu año de nacimiento"))
-
-
-let edad = anio - anioDeNacimiento
-
 /*let numero1 = 100
 let numero2 = 90
 let resultadoMultiplicacion = numero1 * numero2 //9000
@@ -15,6 +7,38 @@ let division = numero1 / numero2 // 1,11
 numero1 = 1000
 resultadoMultiplicacion = resultadoMultiplicacion * numero1 // 9000000
 */
+let intentos=1
+let identificar = true
+do{
+let nombreUsuario = prompt ("Decime tu nombre")
+
+    if(nombreUsuario === "" || nombreUsuario === null){
+    break
+    }
+    
+
+    if (nombreUsuario === "Diego Adrian" && intentos<=3){
+
+    alert("Bienvenido " + nombreUsuario)
+    identificar=false
+    }
+    else{
+        alert ("no se reconoce el usuario " + nombreUsuario)
+        intentos++
+        if(intentos>3){
+            alert("Isted supero los 3 intentos")
+            console.error("No hay mas intentos")
+            break;
+        }
+
+    }  
+}   while(identificar)
+
+const anio = 2023
+let anioDeNacimiento = parseInt (prompt("Decime tu año de nacimiento"))
+let edad = anio - anioDeNacimiento
+
+
 if (edad > 18 && edad <60)
     {
         alert("Puedes ingresar al sitio web")
@@ -26,8 +50,5 @@ if (edad > 18 && edad <60)
         alert("Debe ingresar sus datos correctamente para ingresar al sitio")
     }
 
-
-let datosUser = `Hola ${nombreUsuario} ${apellidoUsuario}, según mis cálculos tenes ${edad} años`
- 
 alert(datosUser)
 console.log (datosUser)
