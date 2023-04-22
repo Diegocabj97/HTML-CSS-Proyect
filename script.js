@@ -37,7 +37,7 @@ let nombreUsuario = prompt ("Decime tu nombre")
 const anio = 2023
 let anioDeNacimiento = parseInt (prompt("Decime tu año de nacimiento"))
 let edad = anio - anioDeNacimiento
-
+let datosUser = ("Bienvenido " + nombreUsuario + "segun mis calculos tenes " + edad + "anios")
 
 if (edad > 18 && edad <60)
     {
@@ -52,3 +52,24 @@ if (edad > 18 && edad <60)
 
 alert(datosUser)
 console.log (datosUser)
+
+let ayuda = confirm("Buen día! Puedo ayudarte con el producto que buscabas?")
+
+if (consulta===true){
+    let producto = prompt("Que producto buscabas? Ingresa el producto")
+    let marca = prompt("Selecciona la marca del " + producto)
+
+    switch(marca){
+        case "amd":
+            alert ("Tenemos " + producto + " de la marca " + marca)
+            break
+
+        case "nvidia":
+        alert ("Tenemos " + producto + " de la marca " + marca)
+            break
+
+        case "gigabyte":
+            alert ("Tenemos " + producto + " de la marca " + marca)    
+            break
+        }
+}
